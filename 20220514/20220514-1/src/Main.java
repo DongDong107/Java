@@ -23,15 +23,15 @@ public class Main {
 				Max = num3;
 			}
 		}
+		else if(num2 >= num3){
+			Max = num2;
+		}
 		else {
-			if(num2 >= num3) {
-				Max = num2;
-			}
-			else {
-				Max = num3;
-			}
-		} // 최대값 찾기 (조건문으로만)
-	
+			Max = num3;
+		}
+		 // 최대값 찾기 (조건문으로만)
+		
+		
 		if(num1 == num2) {
 			if(num2 == num3) {
 				System.out.print(10000+num1*1000);
@@ -41,8 +41,8 @@ public class Main {
 			}
 		}
 		else {
-			if(num2 == num3) {
-				System.out.print(1000+num2*100);
+			if(num2 == num3 || num1 == num3) {
+				System.out.print(1000+num3*100);
 			}
 			else {
 				System.out.print(Max*100);
