@@ -17,14 +17,13 @@ public class fourteen {
 
 		for (;;) {
 //			int N = sc.nextInt();
-			
 
 			int a = N / 10;
 			int b = N % 10;
 
-			M = (b*10)+((a+b)%10);
-			N=M;
-						
+			M = (b * 10) + ((a + b) % 10);
+			N = M;
+
 			if (A == M) {
 				System.out.print(count);
 				break;
@@ -36,4 +35,3 @@ public class fourteen {
 	}
 
 }
-
