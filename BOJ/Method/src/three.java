@@ -35,34 +35,35 @@ public class three {
 //					count++;
 //				} // 모든 차가 동일하여 반복문이 다 돌아가면 카운트
 //			}
-			
-			if(length < 3) {
+
+			if (length < 3) {
 				count++;
-			}
-			else {
-				int gap = arr[length] - arr[length-1];
-				
-				for(int j = length; j>0; j--) {
-					try {
-					
-					if (arr[length] - arr[length-1]!= gap) {
-						break;
-					}}
-					catch(IndexOutOfBoundsException e) {
-						count++;
+			} else {
+
+				int gap = arr[length - 1] - arr[length - 2]; // 1. 등차를 먼저 구한다.
+
+				for (int j = length - 1; j > 1; j--) { //뒤쪽부터 구한다. j>1까지 구하는 이유는 j>0을 하게되면 조건문 arr[j-2] 예외발생./ j=2 일때 어차피 마지막 0과 1 의 등차가 같은지를 구하기 때문에
+
+					if (arr[j - 1] - arr[j - 2] != gap) { //j부터 계산을 하면 gap 부분이랑 동일해서 카운트가 되어서 바로 다음 차수 계산
+						break;	// 다르게 되면 애초에 여기서 걸러짐
+					} else {
+						count++; // 다 넘어와 지면 등차수열이므로 카운트
 					}
+
+				}
+
 //					else if (j == length - 1) {
 //						count++;
 //					} 
-				}
 			}
-			
-			//gap선언부터 여기가 수정되어야 할 부분.
 		}
+
+		// gap선언부터 여기가 수정되어야 할 부분.
 
 		System.out.print(count);
 
 		return count;
+
 	}
 
 	public static void main(String[] args) {
