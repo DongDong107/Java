@@ -37,7 +37,7 @@ public class no2675 {
 			
 			// StringBuilder는 꼭 toString() 해줘야 한다고 해서 (이유 알아보기)
 			String str = stringBuilder.toString();
-
+						
 			bw.write(str);
 			bw.newLine();
 		}
